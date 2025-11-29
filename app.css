@@ -69,6 +69,8 @@ main{
     font-weight: 500;
     transition: 0.25s ease-in-out;
     white-space: nowrap;
+    box-shadow: 2px 2px 3px 3px rgba(43, 35, 35, 0.4);
+    z-index:4;
 }
 
 .bt:hover {
@@ -679,6 +681,7 @@ main {
     }
 
 }
+
 
 
 
