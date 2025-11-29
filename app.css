@@ -227,6 +227,7 @@ main {
     color: rgb(164, 162, 167);
     transition: 0.25s ease-in;
     padding: 15px;
+    z-index:2;
 }
 
 .grids:hover {
@@ -296,6 +297,8 @@ main {
     margin: 40px auto;
     color: white;
     font-family: 'Poppins', sans-serif;
+     z-index: 15;
+    box-shadow: 10px 10px 20px 3px rgb(67, 67, 147);
 }
 
 .edu-title {
@@ -360,6 +363,7 @@ main {
     color: white;
     font-family: 'Poppins', sans-serif;
     transition: 0.25s ease-in-out;
+     box-shadow: 2px 2px 15px 3px rgb(68,68,176);
 }
 
 .connect-box:hover {
@@ -672,4 +676,5 @@ main {
     #nav-check:checked ~ .nav-icon span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -8px);
     }
+
 }
