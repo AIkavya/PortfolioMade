@@ -51,13 +51,12 @@ main{
     padding-top: 100px;
 }
 
-/* --- HAMBURGER MENU HIDDEN LOGIC --- */
+
 #nav-check {
     display: none;
 }
 .nav-icon {
-    display: none; /* Hidden on Desktop */
-}
+    display: none; }
 /* ----------------------------------- */
 
 .bt {
@@ -229,12 +228,14 @@ main {
     color: rgb(164, 162, 167);
     transition: 0.25s ease-in;
     padding: 15px;
-    z-index:2;
+    z-index: 2;
+    
 }
 
 .grids:hover {
     border: 2px solid rgb(158, 158, 158);
     transform: scale(1.15, 1.15);
+    
 }
 
 .pr1 {
@@ -246,17 +247,62 @@ main {
 }
 
 .projects {
-    padding-top: 70px;
+    padding-top: 90px;
 }
 
 .grids_projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 80px;
-    padding-top: 20px;
-    border-top: 3px solid rgb(32, 25, 25);
+    padding-top: 30px;
+    border-top: 2px solid rgb(20, 18, 18);
+    
+}
+.project-card {
+    background-color: rgb(0,0,0);
+    padding: 25px;
+    border-radius: 16px;
+    border: 2px solid rgb(68, 68, 176);
+    transition: 0.3s ease;
+    text-align: center;
+    box-shadow: 2px 2px 25px rgba(68, 68, 176);
+}
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 35px rgba(68, 68, 176, 0.45);
+}
+.project-title {
+    font-size: 22px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
+.project-sub {
+    font-size: 16px;
+    color: rgba(95, 95, 106, 0.8);
+    font-weight: 500;
+    margin: 6px 0 12px 0;
+}
+
+.project-desc {
+    font-size: 15px;
+    color: rgb(170, 170, 170);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.project-skills {
+    display: inline-block;
+    padding: 6px 12px;
+    color: white;
+    border: 1px solid rgba(68, 68, 176, 0.4);
+    border-radius: 6px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    background: rgba(68, 68, 176, 0.15);
+}
 .sv { height: 90%; }
 
 .ab {
@@ -288,6 +334,7 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+   
 }
 
 .edu-card {
@@ -299,8 +346,13 @@ main {
     margin: 40px auto;
     color: white;
     font-family: 'Poppins', sans-serif;
-     z-index: 15;
-    box-shadow: 10px 10px 20px 3px rgb(67, 67, 147);
+     z-index: 100;
+    box-shadow: 8px 8px 20px 3px rgb(67, 67, 147);
+    transition: 1s;
+}
+
+.edu-card:hover{
+     box-shadow: -8px -8px 20px 3px rgb(67, 67, 147);
 }
 
 .edu-title {
@@ -365,12 +417,13 @@ main {
     color: white;
     font-family: 'Poppins', sans-serif;
     transition: 0.25s ease-in-out;
-     box-shadow: 2px 2px 15px 3px rgb(68,68,176);
+    box-shadow: 1px 1px 15px 3px rgba(68,68,176,0.4);
 }
 
 .connect-box:hover {
-    transform: scale(1.1);
-    border-color: white;
+    transform: translateY(-8px);
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 35px rgba(68, 68, 176, 0.45);
 }
 
 .connect-icon {
@@ -442,19 +495,23 @@ main {
     display: flex;
     flex-direction: row;
     gap: 28px;
-    border: 3px solid var(--brand-blue);
+    border: 2px solid var(--brand-blue);
     border-radius: 5px;
     justify-content: space-between;
     transition: 0.25s ease-in;
     padding: 15px;
     align-items: center;
-    box-shadow: 2px 2px 15px 3px rgb(68,68,176);
+    transition: 0.25s ease-in;
+     box-shadow: 1px 1px 15px 3px rgba(68,68,176,0.6);
+
+    
 }
+
+
 
 .svg4 {
     height: 250px;
     width: 250px;
-   
 }
 
 .resume {
@@ -467,8 +524,9 @@ main {
 }
 
 .thoughts:hover {
-    border: 2px solid rgb(158, 158, 158);
-    transform: scale(1.07, 1.05);
+    transform: translateY(-8px);
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 35px rgba(68, 68, 176, 0.45);
 }
 
 .footer {
@@ -603,6 +661,10 @@ main {
         row-gap: 30px;
     }
 
+    .project-card{
+         padding:20px;
+    }
+
     .Background {
         grid-template-columns: 1fr;
     }
@@ -641,27 +703,33 @@ main {
         top: 80px;
         left: 0;
         width: 100%;
-        background-color: black; /* RGB(68,68,176) */
+        background-color: black;/* RGB(68,68,176) */
         flex-direction: column;
         padding: 20px 0;
         z-index: 1000;
         border-radius: 0 0 10px 10px;
-        box-shadow: 0px 10px 15px rgba(0,0,0,0.5);
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
     }
 
     /* Menu Item Styles */
     .kp2 .bt {
-        background-color: transparent;
+        background-color:transparent;
         color: white; /* White text */
         width: 90%;
         text-align: center;
         margin-bottom: 10px;
         border: 1px solid rgba(255,255,255,0.3);
+        
     }
 
     .kp2 .bt:hover {
         background-color: white;
         color: black;
+    }
+
+    .edu-card{
+          border-color: rgb(68,68,176);
+           box-shadow: 0px 0px 35px rgba(72, 72, 171, 0.45);
     }
 
     /* The Trigger: When Checkbox is checked -> Show Menu */
@@ -679,9 +747,4 @@ main {
     #nav-check:checked ~ .nav-icon span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -8px);
     }
-
 }
-
-
-
-
