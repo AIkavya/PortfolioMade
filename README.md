@@ -3,6 +3,14 @@
 A beautifully crafted, modern portfolio website built using HTML, CSS, and JavaScript.
 It highlights my projects, skills, and journey as a growing developer, with a clean UI and smooth user experience.
 
+## 📸 Portfolio Preview
+
+### 🧩 Hero Section
+![Hero Section](hero.png)
+
+### 🚀 Projects
+![Projects Section](project.png)
+
 🌟 Highlights
 
 🎨 Minimal & modern design
