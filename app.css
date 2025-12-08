@@ -35,21 +35,15 @@ body {
     height: 80px;
     align-items: center;
     border-bottom: 1px solid #333;
-
-   
-
-
     position: sticky;
     top: 0;
     left: 0;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     background: rgb(15, 15, 15);
     z-index: 9999;
 }
-main{
-    padding-top: 100px;
-}
+
 
 
 #nav-check {
@@ -59,22 +53,23 @@ main{
     display: none; }
 /* ----------------------------------- */
 
-.bt {
+.bt{
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     padding: 10px 16px;
-    background-color: var(--blue);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(234, 232, 232, 0.5);
     border-radius: 5px;
     font-weight: 500;
     transition: 0.25s ease-in-out;
     white-space: nowrap;
-    box-shadow: 2px 2px 3px 3px rgba(43, 35, 35, 0.4);
     z-index:4;
 }
 
 .bt:hover {
-    background-color: var(--brand-blue);
-    color: #f3f3f3;
+    background-color: white;
+    color: black;
+    border-color:#333;
 }
 
 .kp2 {
@@ -86,10 +81,11 @@ main{
 }
 
 /* Hero Section */
-.hero_section {
+.hero_section{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    min-height: 100vh;
 }
 
 .hero_h1, .hero_h12, .hero_h13 {
@@ -103,13 +99,13 @@ main{
     text-align: center;
 }
 
-.hero_h1 { margin-top: 40px; }
+.hero_h1 { margin-top: 40px; letter-spacing: 4px;}
 .hero_h12 { letter-spacing: 2px; }
 .hero_h13 { font-weight: 700; letter-spacing: 3px; }
 
-.hero_span { color: rgb(140, 74, 255); }
+.hero_span { color: rgb(90, 33, 187);; } 
 .hero_span2 { font-weight: 800; letter-spacing: 4px; color: #ffffff; }
-
+ 
 #hero {
     font-size: 20px;
     line-height: 1.5;
@@ -128,24 +124,25 @@ main{
     align-items: center;
 }
 
-.Build {
+.Build{
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     padding: 10px 16px;
-    background-color: var(--brand-blue);
+    background-color: white;
     border-radius: 5px;
     font-weight: 500;
     transition: 0.25s ease-in-out;
+    border:  1px solid #333;
 }
 
-.Build:hover, .Build:link {
-    background-color: #f3f3f3;
-    color: black;
+.Build:hover{
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(234, 232, 232, 0.5);
+    color:white;
 }
 
-main {
-    padding-top: 150px;
-}
+
+
 
 .maindiv {
     display: grid;
@@ -155,15 +152,24 @@ main {
 }
 
 .svg {
-    height: 400px;
-    max-width: 100%;
+    max-height: 400px;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    
+    
 }
 
 .svg1 {
-    height: 350px;
+    max-height: 400px;
+    display: block;
     position: relative;
-    transform: translateX(25%);
-    max-width: 100%;
+    top:20%;
+    left:30%;
+   transform: translate(-20%,-20%);
+   
 }
 
 .div2 {
@@ -187,7 +193,9 @@ main {
     font-family: 'Patrick Hand', sans-serif;
     letter-spacing: 3px;
     line-height: 1.5;
+   
 }
+
 
 .skills {
     padding-top: 70px;
@@ -204,6 +212,9 @@ main {
     color: rgb(164, 162, 167);
     text-decoration: none;
 }
+.p2{
+    text-decoration: none;
+}
 
 .grid_skills {
     padding-top: 70px;
@@ -215,6 +226,7 @@ main {
 .svg3 {
     width: 100px;
     height: 100px;
+    margin: 0 auto;
 }
 
 .grids {
@@ -222,19 +234,23 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0, 0, 0);
-    border: 2px solid var(--brand-blue);
+    background: #111;
+    border: 1px solid rgba(255,255,255,0.1);
     border-radius: 5px;
     color: rgb(164, 162, 167);
     transition: 0.25s ease-in;
     padding: 15px;
     z-index: 2;
+    backdrop-filter: blur(8px);
+   
     
 }
 
 .grids:hover {
-    border: 2px solid rgb(158, 158, 158);
-    transform: scale(1.15, 1.15);
+    
+    transform: scale(1.10, 1.10);
+    border-color: rgb(239, 239, 240);
+    box-shadow: 0px 0px 35px rgba(68, 68, 176, 0.45);
     
 }
 
@@ -259,17 +275,23 @@ main {
     
 }
 .project-card {
-    background-color: rgb(0,0,0);
+     background: rgba(255, 255, 255, 0.03);
     padding: 25px;
     border-radius: 16px;
-    border: 2px solid rgb(68, 68, 176);
+    border: 1px solid rgb(255, 255, 255);
+    backdrop-filter: blur(8px);
     transition: 0.3s ease;
     text-align: center;
-    box-shadow: 2px 2px 25px rgba(68, 68, 176);
+    box-shadow: 0px 0px 25px rgba(68, 68, 176, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 .project-card:hover {
     transform: translateY(-8px);
-    border-color: rgb(255, 255, 255);
+    border-color: rgb(68, 68, 176);
     box-shadow: 0px 0px 35px rgba(68, 68, 176, 0.45);
 }
 .project-title {
@@ -303,22 +325,41 @@ main {
     letter-spacing: 0.5px;
     background: rgba(68, 68, 176, 0.15);
 }
-.sv { height: 90%; }
+.sv {  height: 50px;}
+
+.a1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+    padding-left: 20px;
+    
+}
 
 .ab {
-    padding-right: 20%;
+    
     color: white;
     font-family: 'Poppins', sans-serif;
     transition: 0.25s ease-in;
+    
+}
+
+.brand-name{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+    align-items: center;
+    gap:2px;
 }
 
 .ba {
-    color: rgb(89, 89, 138);
+    color: rgb(50, 53, 52);
     font-family: 'Poppins', sans-serif;
     transition: 0.25s ease-in;
 }
 
-.ab:hover { color: rgb(89, 89, 138); }
+.ab:hover { color: rgba(255, 255, 255, 0.4); }
 .ba:hover { color: white; }
 
 .pr2 {
@@ -338,21 +379,25 @@ main {
 }
 
 .edu-card {
-    background-color: rgb(0, 0, 0);
-    border: 2px solid var(--brand-blue);
-    padding: 20px 25px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 40px auto;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-     z-index: 100;
-    box-shadow: 8px 8px 20px 3px rgb(67, 67, 147);
-    transition: 1s;
+   background: rgba(255, 255, 255, 0.04);
+border: 1px solid rgba(255, 255, 255, 0.12);
+padding: 28px 30px;
+border-radius: 14px;
+max-width: 600px;
+margin: 40px auto;
+color: #f0f0f0;
+font-family: 'Poppins', sans-serif;
+backdrop-filter: blur(6px);
+box-shadow: 0px 0px 25px rgba(68, 68, 176, 0.35);
+transition: 0.4s ease-in-out;
+
 }
 
 .edu-card:hover{
-     box-shadow: -8px -8px 20px 3px rgb(67, 67, 147);
+     transform: translateY(-6px);
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 40px rgba(68, 68, 176, 0.55);
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .edu-title {
@@ -389,7 +434,7 @@ main {
 
 .connect-title {
     font-size: 28px;
-    color: var(--brand-blue);
+    color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
 }
@@ -409,15 +454,20 @@ main {
 }
 
 .connect-box {
-    background-color: black;
-    border: 2px solid var(--brand-blue);
-    border-radius: 10px;
-    padding: 30px 20px;
-    text-decoration: none;
-    color: white;
+    text-decoration: none;   
     font-family: 'Poppins', sans-serif;
+    background: #111;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 26px 22px;
+    color: #e8e8e8;
     transition: 0.25s ease-in-out;
-    box-shadow: 1px 1px 15px 3px rgba(68,68,176,0.4);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .connect-box:hover {
@@ -446,21 +496,26 @@ main {
 .connect-form textarea {
     padding: 12px 15px;
     border-radius: 8px;
-    border: 2px solid var(--brand-blue);
+     border: 1px solid rgba(234, 232, 232, 0.5);
     background-color: rgb(15, 15, 15);
     color: white;
     font-family: 'Poppins', sans-serif;
     outline: none;
 }
 
+.connect-form input:focus,
+.connect-form textarea:focus{
+    border-color: white;
+    
+}
 .connect-form textarea {
     height: 130px;
     resize: none;
 }
 
 .send-btn {
-    background-color: var(--brand-blue);
-    border: none;
+     background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(234, 232, 232, 0.5);
     padding: 12px 20px;
     border-radius: 8px;
     font-family: 'Poppins', sans-serif;
@@ -477,7 +532,7 @@ main {
 
 .p23 {
     padding-top: 10px;
-    color: var(--brand-blue);
+    color:white;
     font-size: 22px;
     font-family: 'Poppins', sans-serif;
 }
@@ -492,19 +547,21 @@ main {
 
 .thoughts {
     width: 80%;
-    display: flex;
-    flex-direction: row;
-    gap: 28px;
-    border: 2px solid var(--brand-blue);
-    border-radius: 5px;
-    justify-content: space-between;
-    transition: 0.25s ease-in;
-    padding: 15px;
-    align-items: center;
-    transition: 0.25s ease-in;
-     box-shadow: 1px 1px 15px 3px rgba(68,68,176,0.6);
+display: flex;
+flex-direction: row;
+gap: 28px;
+padding: 20px 25px;
 
-    
+ background: rgba(0, 0, 0, 0.04);
+border: 1px solid rgba(234, 232, 232, 0.5);
+border-radius: 12px;
+
+justify-content: space-between;
+align-items: center;
+
+
+transition: 0.3s ease;
+ 
 }
 
 
@@ -524,10 +581,11 @@ main {
 }
 
 .thoughts:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     border-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 35px rgba(68, 68, 176, 0.45);
+    box-shadow: 0px 0px 30px rgba(68, 68, 176, 0.45);
 }
+
 
 .footer {
     background: rgb(15, 15, 15);
@@ -597,96 +655,766 @@ main {
 
 
 
-
-@media (max-width: 1024px) {
-    .body { max-width: 95%; }
-    .hero_h1, .hero_h12, .hero_h13 { font-size: 60px; }
-    .grid_skills { grid-template-columns: repeat(3, 1fr); }
-    .grids_projects { column-gap: 20px; }
-    .ab { padding-right: 20px; font-size: 1.5rem; }
-    .nav{
-         padding: 0 10px;
-         width: 100%;
+/* --- Extra Large Screens (4K / Ultrawide) --- */
+@media (min-width: 1900px) {
+    html {
+        font-size: 1.8rem;
+    }
+    .body {
+        max-width: 85%;
+    }
+    .hero_section 
+    {
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        padding-top: 150px;
+    }
+    .grid_skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .ab, .ba {
+        font-size: 1.9rem;
+    }
+    .nav {
+        gap: 15px;
+        min-height: 125px;
+    }
+    .sv {
+        min-height: 90px;
+    }
+    .a1 {
+        padding-left: 0px;
+    }
+    .bt {
+        padding: 0.7rem 0.9rem;
+        font-weight: 500;
+        font-size: 0.8rem;
+        border-radius: 7px;
+    }
+    .hero_h1, .hero_h12, .hero_h13 {
+        margin-top: 1rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        line-height: 1.5;
+        font-size: 120px;
+    }
+    .Build {
+        padding: 0.7rem 0.9rem;
+        font-weight: 500;
+        font-size: 0.8rem;
+        border-radius: 7px;
+    }
+    .svg {
+        max-height: 500px;
+        display: block;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #hero {
+        font-size: 0.9rem;
+    }
+    .div211 {
+        font-size: 50px;
+        font-weight: 450;
+    }
+    .div22 {
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+    .div2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    .maindiv {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+        column-gap: 1.2rem;
+    }
+    .svg1 {
+        max-height: 500px;
+        display: block;
+        position: relative;
+        top: 20%;
+        left: 30%;
+        transform: translate(-20%, -20%);
+    }
+    .p1 {
+        font-size: 30px;
+        padding-top: 100px;
+    }
+    .p2 {
+        padding-bottom: 70px;
+        font-size: 30px;
+    }
+    .pr1, .pr2 {
+        font-size: 30px;
+    }
+    .pr1 {
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+    .pr2 {
+        padding-top: 150px;
+        padding-bottom: 70px;
+    }
+    .skills{
+        padding-top: 20px;
+        padding-bottom: 125px;
+         justify-items: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .projects {
+        padding-top: 120px;
+        justify-self: center;
+        align-self: center;
+    }
+    .svg3 {
+        width: 120px;
+        height: 120px;
+    }
+    .grids-projects {
+        column-gap: 120px;
+    }
+    .project-card {
+        height: 600px;
+        gap: 10px;
+        max-width: 500px;
+        justify-content: space-between;
+    }
+    .project-title {
+        font-size: 45px;
+    }
+    .project-desc {
+        font-size: 25px;
+    }
+    .project-skills {
+        font-size: 25px;
+        padding: 8px 16px;
+    }
+    .project-sub {
+        font-size: 25px;
+    }
+    .grids {
+        width: 400px;
+    }
+    .grid_skills {
+        justify-items: center;
+        align-items: center;
+        padding-top: 60px;
+    }
+    .edu-card {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 10px;
+        max-width: 800px;
+    }
+    .edu-title {
+        font-size: 60px;
+    }
+    .edu-degree {
+        font-size: 40px;
+    }
+    .edu-college {
+        font-size: 30px;
+    }
+    .edu-desc {
+        font-size: 25px;
+    }
+    .Background {
+        gap: 60px;
+    }
+    .Back {
+        justify-self: center;
+        align-self: center;
+    }
+    .connect {
+        padding-top: 150px;
+        justify-items: center;
+        align-items: center;
+    }
+    .connect-title, .p23 {
+        font-size: 45px;
+    }
+    .connect-sub {
+        font-size: 30px;
+    }
+    .connect-box {
+        width: 350px;
+        gap: 20px;
+    }
+    .connect-icon {
+        width: 90px;
+        height: 90px;
+    }
+    .connect-grid {
+        padding-bottom: 60px;
+    }
+    .connect-form {
+        max-width: 900px;
+    }
+    input[type="text"], input[type="email"], textarea, button {
+        font-size: 25px;
+        padding: 15px 20px;
+        border-radius: 10px;
+        width: 700px;
+    }
+    .pr2 {
+        font-size: 30px;
+    }
+    .footer-title {
+        font-size: 30px;
+    }
+    .footer-subtitle {
+        font-size: 25px;
+    }
+    .imgf {
+        height: 40px;
+    }
+    .footer-cta {
+        font-size: 20px;
+    }
+    .footer-copy {
+        font-size: 18px;
     }
 }
 
-@media (max-width: 768px) {
+/* --- Large Desktop / Laptop --- */
+@media (min-width: 1400px ) and (max-width: 1900px) 
+{
+
+    
+    
+    main {
+        padding-top: 200px;
+        
+    }
+    
+    .hero_h1,.hero_h12, .hero_h13 {
+        margin-top: 1rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        line-height: 1.5;
+        font-size: 90px;
+    }
+
+    .hero_section
+    {
+        display: flex;
+        flex-direction: column;
+        min-height: 90vh;
+        justify-content: center;
+        align-items: center;
+       
+    }
+   
+    .nav {
+        min-height: 100px;
+    }
+    .projects {
+        padding-top: 120px;
+        justify-self: center;
+        align-self: center;
+    }
+   
+    .skills
+    {
+        padding-top: 100px;
+        padding-bottom: 125px;
+        gap: 30px;
+        justify-items: center;
+        align-items: center;
+    }
+  
+
+    .grids{
+        max-width:250px;
+    }
+    .grid_skills {
+        justify-items: center;
+        align-items: center;
+        padding-top: 60px;
+    }
+  
+    .grids {
+        width: 400px;
+    }
+    .grid_skills {
+        justify-items: center;
+        align-items: center;
+        padding-top: 60px;
+    }
+
+    .projects {
+        padding-top: 100px;
+        justify-items: center;
+        align-items: center;
+
+    }
+    .project-card {
+        height: 430px;
+        gap: 10px;
+        max-width: 370px;
+        justify-content: space-between;
+    }
+    .project-title {
+        font-size: 20px;
+    }
+    .project-desc {
+        font-size: 15px;
+    }
+    .project-skills {
+        font-size: 15px;
+        padding: 8px 16px;
+    }
+    .project-sub {
+        font-size: 15px;
+    }
+
+    .Background{
+        justify-self: center;
+        align-self: center;
+        gap:20px;
+    }
+
+    .connect-box
+    {
+               width: 300px;
+               gap: 15px;
+    }
+
+    .connect-grid{
+        justify-self: center;
+        align-self: center;
+    }
+
+    #story{
+        padding-top: 50px;
+    }
+    .aboutMe{
+        padding-top: 10px;
+    }
+
+    .maindiv{
+       column-gap: 10px;
+        
+    }
+    .edu-card{
+        width: 500px;
+        height: 300px ;
+    }
+}
+
+/* --- Laptop Standard --- */
+@media (min-width: 1200px) and (max-width: 1400px)
+{
+  
+    
+  main {
+        padding-top: 120px;
+        
+    }
+    
+    .bt,.Build{
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .ab, .ba {
+        font-size: 30px;
+    }
+    .hero_h1,.hero_h12, .hero_h13 {
+        margin-top: 1rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        line-height: 1.5;
+        font-size: 90px;
+    }
+
+    .hero_section
+    {
+        display: flex;
+        flex-direction: column;
+        min-height: 90vh;
+        justify-content: center;
+        align-items: center;
+       
+    }
+   
+    .nav {
+        min-height: 100px;
+    }
+    .projects {
+        padding-top: 120px;
+        justify-self: center;
+        align-self: center;
+    }
+   
+    .skills
+    {
+        padding-top: 100px;
+        padding-bottom: 125px;
+        gap: 30px;
+        justify-items: center;
+        align-items: center;
+    }
+  
+
+    .grids{
+        max-width:250px;
+    }
+    .grid_skills {
+        justify-items: center;
+        align-items: center;
+        padding-top: 60px;
+    }
+  
+    .grids {
+        width: 400px;
+    }
+    .grid_skills {
+        justify-items: center;
+        align-items: center;
+        padding-top: 60px;
+    }
+
+    .projects {
+        padding-top: 100px;
+        justify-items: center;
+        align-items: center;
+
+    }
+    .project-card {
+        height: 380px;
+        gap: 5px;
+        max-width: 330px;
+        justify-content: space-between;
+    }
+    .project-title {
+        font-size: 18px;
+    }
+    .project-desc {
+        font-size: 13px;
+    }
+    .project-skills {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+    .project-sub {
+        font-size: 13px;
+    }
+
+    .Background{
+        justify-self: center;
+        align-self: center;
+        gap:20px;
+    }
+
+    .connect-box
+    {
+               width: 300px;
+               gap: 15px;
+    }
+
+    .connect-grid{
+        justify-self: center;
+        align-self: center;
+    }
+
+    #story{
+        padding-top: 50px;
+    }
+    .aboutMe{
+        padding-top: 10px;
+    }
+
+    .maindiv{
+       column-gap: 10px;
+        
+    }
+    .edu-card{
+        width: 450px;
+        height: 320px ;
+    }
+    
+   
+}
+    
+
+/* --- Small Laptop / Tablet Landscape --- */
+@media (min-width: 1115px) and (max-width: 1200px) {
+    .svg {
+        max-height: 300px;
+        display: block;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .svg1 {
+        max-height: 300px;
+        display: block;
+        position: relative;
+        top: 20%;
+        right: 20%;
+    }
+    .div22 {
+        font-size: 20px;
+    }
+    .div2 {
+        gap: 10px;
+    }
+    .bt, .Build {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .ab, .ba {
+        font-size: 25px;
+    }
+
+    .svg3{
+        width: 80px;
+        height: 80px;
+    }
+
+    .hero_h1, .hero_h12, .hero_h13 {
+        font-size: 75px;
+    }
+
+    .hero_section{
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+      .projects 
+      {
+        padding-top: 100px;
+        justify-items: center;
+        align-items: center;
+
+      }
+    .project-card {
+        height: 330px;
+        gap: 5px;
+        max-width: 280px;
+        justify-content: space-between;
+    }
+    .project-title {
+        font-size: 15px;
+    }
+    .project-desc {
+        font-size: 11px;
+    }
+    .project-skills {
+        font-size: 11px;
+        padding: 7px 14px;
+    }
+    .project-sub {
+        font-size: 11px;
+    }
+
+    .edu-college{
+         font-size: 13px;
+    }
+    .edu-degree{
+       font-size: 18px;
+    }
+    .edu-desc{
+         font-size: 13px;
+    }
+    .edu-title{
+            font-size:25px;
+    }
+
+    .edu-card{
+        width: 400px;
+        height: 280px ;
+    }
+
+    .thoughts{
+        width: 90%;
+    }
+
+
+}
+
+/* --- Tablet Portrait --- */
+@media (min-width: 910px) and (max-width: 1115px) {
     /* 1. Layout Adjustments */
     .body {
-        max-width: 100%;
+        max-width: 95%;
         padding: 0 10px;
     }
-
     .nav {
         padding: 0 10px;
-        width:100%;
-     
+        width: 100%;
     }
 
+    .ab,.ba{
+        font-size: 25px;
+    }
     /* 2. Fix Giant Fonts */
     .hero_h1, .hero_h12, .hero_h13 {
-        font-size: 36px;
-        margin-top: 10px;
+        font-size: 60px;
+       
     }
-    
-    .div211 { font-size: 30px; }
-    .div22 { font-size: 18px; letter-spacing: 1px; }
+    .p1{
+        font-size: 17px;
+    }
 
+    .bt,.Build{
+        font-size: 14px;
+        padding: 7px 14px;
+    }
+
+    .hero_section
+    {
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    #hero{
+        font-size: 17px;
+    }
+    .div211 {
+        font-size: 30px;
+    }
+    .div22 {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
     /* 3. Stack Grids to Single Column */
     .maindiv {
-        grid-template-columns: 1fr;
+        column-gap: 0px;
+        row-gap: 10px;
     }
-
     .svg1 {
-        transform: none; /* Fix the side scroll issue */
-        width: 100%;
-        height: auto;
+        max-height: 200px;
     }
-    
     .svg {
-        height: auto;
-        max-width: 80%;
-        margin: 0 auto;
-        display: block;
+        max-height: 200px;
     }
-
+    .svg3{
+        height: 65px;
+        width: 65px;
+    }
     /* Skills: 2 columns on mobile looks better than 1 */
     .grid_skills {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grids{
+        width: 200px;
+        
     }
 
+    .project{
+        padding-top: 40px;
+    }
     /* Projects: Stack vertically */
-    .grids_projects {
-        grid-template-columns: 1fr;
-        row-gap: 30px;
+    .grids_projects 
+    {
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       gap:40px;
+       padding-top: 40px;
     }
-
-    .project-card{
-         padding:20px;
+    .project-card {
+        padding: 20px;
+        width:320px;
+        height: 300px;
     }
-
     .Background {
-        grid-template-columns: 1fr;
+         justify-self: center;
+         align-self: center;
+         gap:10px;
+
     }
 
-    .connect-grid {
-        grid-template-columns: 1fr;
+    .edu-card{
+        width: 350px;
+        height: 300px;
     }
 
+    .edu-college{
+                  font-size: 12px ;
+    }
+
+    .edu-degree{
+              font-size: 14px;
+    }
+
+    .edu-desc{
+             font-size: 14px;
+    }
+    .edu-title{
+        font-size:20px ;
+    }
+
+    .pr1{
+        font-size: 16px;
+    }
+    .connect-box 
+    {
+           width:200px;
+    }
+
+    .connect-grid{
+        justify-self:center;
+        align-self: center;
+
+    }
+
+    .svg{
+     
+        height: 350px;
+    }
     /* Thoughts / About Me Section */
     .thoughts {
         flex-direction: column;
-        width: 100%;
+        width: 350px;
+        height: 500px;
         text-align: center;
+        
     }
 
-    /* 4. HAMBURGER MENU LOGIC */
+    .svg4{
+        height: 230px;
+    }
+
+    .aboutMe{
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .skills{
+        justify-self: center;
+        align-self: center;
+
+    }
+    
     .nav-icon {
-        display: block; /* Show the 3 lines */
+        display: block; 
         cursor: pointer;
         padding: 5px;
     }
-
     .nav-icon span {
         display: block;
         width: 30px;
@@ -696,48 +1424,42 @@ main {
         border-radius: 2px;
         transition: 0.3s;
     }
-
     .kp2 {
-        display: none; /* Hide links by default */
+        display: none; 
         position: absolute;
         top: 80px;
-        left: 0;
-        width: 100%;
-        background-color: black;/* RGB(68,68,176) */
+        left: 80%;
+        width: 20%;
+         background: white;
         flex-direction: column;
         padding: 20px 0;
         z-index: 1000;
         border-radius: 0 0 10px 10px;
         box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
     }
-
-    /* Menu Item Styles */
+    
     .kp2 .bt {
-        background-color:transparent;
-        color: white; /* White text */
+        background-color: transparent;
+        color: rgb(0, 0, 0); 
         width: 90%;
         text-align: center;
         margin-bottom: 10px;
-        border: 1px solid rgba(255,255,255,0.3);
-        
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        font-size: 16px;
     }
-
     .kp2 .bt:hover {
-        background-color: white;
-        color: black;
+        background-color: rgb(0, 0, 0);
+        color: rgb(250, 250, 250);
     }
-
-    .edu-card{
-          border-color: rgb(68,68,176);
-           box-shadow: 0px 0px 35px rgba(72, 72, 171, 0.45);
+    .edu-card {
+        border-color: rgb(68, 68, 176);
+        box-shadow: 0px 0px 35px rgba(72, 72, 171, 0.45);
     }
-
     /* The Trigger: When Checkbox is checked -> Show Menu */
     #nav-check:checked ~ .kp2 {
         display: flex;
     }
-
-    /* Animation for Hamburger Icon (Optional flair) */
+    /* Animation for Hamburger Icon */
     #nav-check:checked ~ .nav-icon span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -747,4 +1469,738 @@ main {
     #nav-check:checked ~ .nav-icon span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -8px);
     }
+}
+
+/* --- Large Phone / Small Tablet --- */
+@media (min-width: 768px) and (max-width: 910px) {
+    /* 1. Layout Adjustments */
+   .body {
+        max-width: 95%;
+        padding: 0 10px;
+    }
+    .nav {
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .ab,.ba{
+        font-size: 25px;
+    }
+    /* 2. Fix Giant Fonts */
+    .hero_h1, .hero_h12, .hero_h13 {
+        font-size: 60px;
+       
+    }
+    .p1{
+        font-size: 17px;
+    }
+
+    .bt,.Build{
+        font-size: 14px;
+        padding: 7px 14px;
+    }
+
+    .hero_section
+    {
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    #hero{
+        font-size: 17px;
+    }
+    .div211 {
+        font-size: 30px;
+    }
+    .div22 {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    /* 3. Stack Grids to Single Column */
+    .maindiv {
+        column-gap: 0px;
+        row-gap: 10px;
+    }
+    .svg1 {
+        max-height: 200px;
+    }
+    .svg {
+        max-height: 200px;
+    }
+    .svg3{
+        height: 65px;
+        width: 65px;
+    }
+    /* Skills: 2 columns on mobile looks better than 1 */
+    .grid_skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grids{
+        width: 200px;
+        
+    }
+
+    .project{
+        padding-top: 40px;
+    }
+    /* Projects: Stack vertically */
+    .grids_projects 
+    {
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       gap:40px;
+       padding-top: 40px;
+    }
+    .project-card {
+        padding: 20px;
+        width:320px;
+        height: 300px;
+    }
+    .Background {
+         justify-self: center;
+         align-self: center;
+         gap:10px;
+
+    }
+
+    .edu-card{
+        width: 350px;
+        height: 300px;
+    }
+
+    .edu-college{
+                  font-size: 12px ;
+    }
+
+    .edu-degree{
+              font-size: 14px;
+    }
+
+    .edu-desc{
+             font-size: 14px;
+    }
+    .edu-title{
+        font-size:20px ;
+    }
+
+    .pr1{
+        font-size: 16px;
+    }
+    .connect-box 
+    {
+           width:200px;
+    }
+
+    .connect-grid{
+        justify-self:center;
+        align-self: center;
+
+    }
+
+    .svg{
+     
+        height: 350px;
+    }
+    /* Thoughts / About Me Section */
+    .thoughts {
+        flex-direction: column;
+        width: 350px;
+        height: 500px;
+        text-align: center;
+        
+    }
+
+    .svg4{
+        height: 230px;
+    }
+
+    .aboutMe{
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .skills{
+        justify-self: center;
+        align-self: center;
+
+    }
+    
+    .nav-icon {
+        display: block; 
+        cursor: pointer;
+        padding: 5px;
+    }
+    .nav-icon span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin-bottom: 5px;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    .kp2 {
+        display: none; 
+        position: absolute;
+        top: 80px;
+        left: 80%;
+        width: 20%;
+         background: white;
+        flex-direction: column;
+        padding: 20px 0;
+        z-index: 1000;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    }
+    
+    .kp2 .bt {
+        background-color: transparent;
+        color: rgb(0, 0, 0); 
+        width: 90%;
+        text-align: center;
+        margin-bottom: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        font-size: 16px;
+    }
+    .kp2 .bt:hover {
+        background-color: rgb(0, 0, 0);
+        color: rgb(250, 250, 250);
+    }
+    .edu-card {
+        border-color: rgb(68, 68, 176);
+        box-shadow: 0px 0px 35px rgba(72, 72, 171, 0.45);
+    }
+    /* The Trigger: When Checkbox is checked -> Show Menu */
+    #nav-check:checked ~ .kp2 {
+        display: flex;
+    }
+    /* Animation for Hamburger Icon */
+    #nav-check:checked ~ .nav-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #nav-check:checked ~ .nav-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    #nav-check:checked ~ .nav-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -8px);
+    }
+}
+
+/* --- Mobile / Small Phone --- */
+@media (min-width: 576px) and (max-width:768px) {
+     /* 1. Layout Adjustments */
+   .body {
+        max-width: 95%;
+        padding: 0 10px;
+    }
+    .nav {
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .ab,.ba{
+        font-size: 25px;
+    }
+    /* 2. Fix Giant Fonts */
+    .hero_h1, .hero_h12, .hero_h13 {
+        font-size: 50px;
+       
+    }
+    .p1{
+        font-size: 17px;
+    }
+
+    .bt,.Build{
+        font-size: 14px;
+        padding: 7px 14px;
+    }
+
+    .hero_section
+    {
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    #hero{
+        font-size: 17px;
+    }
+    .div211 {
+        font-size: 30px;
+    }
+    .div22 {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    /* 3. Stack Grids to Single Column */
+    .maindiv {
+        column-gap: 0px;
+        row-gap: 10px;
+    }
+    .svg1 {
+        max-height: 200px;
+    }
+    .svg {
+        max-height: 200px;
+    }
+    .svg3{
+        height: 60px;
+        width: 60px;
+    }
+    /* Skills: 2 columns on mobile looks better than 1 */
+    .grid_skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grids{
+        width: 150px;
+        
+    }
+
+    .project{
+        padding-top: 40px;
+    }
+    /* Projects: Stack vertically */
+    .grids_projects 
+    {
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       gap:40px;
+       padding-top: 40px;
+    }
+    .project-card {
+        padding: 20px;
+        width:320px;
+        height: 300px;
+    }
+    .Background 
+    {    grid-template-columns: 1fr;
+         justify-self: center;
+         align-self: center;
+         gap:20px;
+
+    }
+
+    .edu-card{
+        width: 350px;
+        height: 300px;
+
+    }
+
+    .edu-college{
+                  font-size: 12px ;
+    }
+
+    .edu-degree{
+              font-size: 14px;
+    }
+
+    .edu-desc{
+             font-size: 14px;
+    }
+    .edu-title{
+        font-size:20px ;
+    }
+
+    .pr1{
+        font-size: 16px;
+    }
+    .connect-box 
+    {
+           width:150px;
+    }
+
+    .connect-grid
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        
+
+    }
+
+    .connect-form{
+        width: 70%;
+    }
+
+    .connect-icon{
+        height: 65px;
+        width: 65px;
+    }
+
+    .svg{
+     
+        height: 350px;
+    }
+    /* Thoughts / About Me Section */
+    .thoughts {
+        flex-direction: column;
+        width: 70%;
+        height: 370px;
+        text-align: center;
+        
+    }
+
+    .svg4{
+        height: 150px;
+    }
+
+    .aboutMe{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .skills{
+        justify-self: center;
+        align-self: center;
+
+    }
+    
+    .nav-icon {
+        display: block; 
+        cursor: pointer;
+        padding: 5px;
+    }
+    .nav-icon span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin-bottom: 5px;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    .kp2 {
+        display: none; 
+        position: absolute;
+        top: 80px;
+        left: 75%;
+        width: 25%;
+         background: white;
+        flex-direction: column;
+        padding: 20px 0;
+        z-index: 1000;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    }
+    
+    .kp2 .bt {
+        background-color: transparent;
+        color: rgb(0, 0, 0); 
+        width: 90%;
+        text-align: center;
+        margin-bottom: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        font-size: 16px;
+    }
+    .kp2 .bt:hover {
+        background-color: rgb(0, 0, 0);
+        color: rgb(250, 250, 250);
+    }
+    .edu-card {
+        border-color: rgb(68, 68, 176);
+        box-shadow: 0px 0px 35px rgba(72, 72, 171, 0.45);
+    }
+    /* The Trigger: When Checkbox is checked -> Show Menu */
+    #nav-check:checked ~ .kp2 {
+        display: flex;
+    }
+    /* Animation for Hamburger Icon */
+    #nav-check:checked ~ .nav-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #nav-check:checked ~ .nav-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    #nav-check:checked ~ .nav-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -8px);
+    }
+}
+
+@media (min-width: 0px) and (max-width: 576px)
+{
+ .body {
+        max-width: 95%;
+        padding: 0 10px;
+    }
+    .nav {
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .ab,.ba{
+        font-size: 25px;
+    }
+
+    .a1{
+        gap:10px;
+    }
+    /* 2. Fix Giant Fonts */
+    .hero_h1, .hero_h12, .hero_h13 {
+        font-size: 40px;
+       
+    }
+    .button_hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:70%;
+    }
+
+    .bt,.Build{
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+        font-size: 10px;
+    }
+    .p1{
+        font-size: 17px;
+    }
+
+    .bt,.Build{
+        font-size: 14px;
+        padding: 7px 14px;
+    }
+
+    .hero_section
+    {
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    #hero{
+        font-size: 17px;
+    }
+    .div211 {
+        font-size: 30px;
+    }
+    .div22 {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    /* 3. Stack Grids to Single Column */
+    .maindiv {
+       
+        padding-top: 25px;
+        grid-template-columns: 1fr;
+
+
+    }
+
+    .p1{
+        font-size: 13px;
+    }
+
+    .div4{
+        order:3;
+    }
+
+    #learn{
+        order:4;
+    }
+    .svg1 {
+        max-height: 200px;
+    }
+    .svg {
+        max-height: 200px;
+    }
+    .svg3{
+        height: 60px;
+        width: 60px;
+    }
+    /* Skills: 2 columns on mobile looks better than 1 */
+    .grid_skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grids{
+        width: 150px;
+        
+    }
+
+    .project{
+        padding-top: 40px;
+    }
+    /* Projects: Stack vertically */
+    .grids_projects 
+    {
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       gap:40px;
+       padding-top: 40px;
+    }
+    .project-card {
+        padding: 20px;
+        width:320px;
+        height: 300px;
+    }
+    .Background 
+    {    grid-template-columns: 1fr;
+         justify-self: center;
+         align-self: center;
+         gap:20px;
+
+    }
+
+    .edu-card{
+        width: 350px;
+        height: 300px;
+
+    }
+
+    .resume{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:15px;
+    }
+
+    .edu-college{
+                  font-size: 12px ;
+    }
+
+    .edu-degree{
+              font-size: 14px;
+    }
+
+    .edu-desc{
+             font-size: 14px;
+    }
+    .edu-title{
+        font-size:20px ;
+    }
+
+    .pr1{
+        font-size: 16px;
+    }
+    .connect-box 
+    {
+           width:150px;
+    }
+
+    .connect-grid
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        
+
+    }
+
+    .connect-form{
+        width: 70%;
+    }
+
+    .connect-icon{
+        height: 65px;
+        width: 65px;
+    }
+
+    .svg{
+     
+        height: 350px;
+    }
+    /* Thoughts / About Me Section */
+    .thoughts {
+        flex-direction: column;
+        width: 100%;
+        height: 400px;
+        text-align: center;
+        
+    }
+
+    .svg4{
+        height: 150px;
+    }
+
+    .aboutMe{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .skills{
+        justify-self: center;
+        align-self: center;
+
+    }
+    
+    .nav-icon {
+        display: block; 
+        cursor: pointer;
+        padding: 5px;
+    }
+    .nav-icon span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin-bottom: 5px;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    .kp2 {
+        display: none; 
+        position: absolute;
+        top: 80px;
+        left: 75%;
+        width: 25%;
+         background: white;
+        flex-direction: column;
+        padding: 20px 0;
+        z-index: 1000;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    }
+    
+    .kp2 .bt {
+        background-color: transparent;
+        color: rgb(0, 0, 0); 
+        width: 90%;
+        text-align: center;
+        margin-bottom: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        font-size: 16px;
+    }
+    .kp2 .bt:hover {
+        background-color: rgb(0, 0, 0);
+        color: rgb(250, 250, 250);
+    }
+    .edu-card {
+        border-color: rgb(68, 68, 176);
+        box-shadow: 0px 0px 35px rgba(72, 72, 171, 0.45);
+    }
+    /* The Trigger: When Checkbox is checked -> Show Menu */
+    #nav-check:checked ~ .kp2 {
+        display: flex;
+    }
+    /* Animation for Hamburger Icon */
+    #nav-check:checked ~ .nav-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #nav-check:checked ~ .nav-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    #nav-check:checked ~ .nav-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -8px);
+    }   
 }
