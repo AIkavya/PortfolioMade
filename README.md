@@ -1,4 +1,4 @@
-# ✨ Personal Portfolio Website  
+\# ✨ Personal Portfolio Website  
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
@@ -8,37 +8,87 @@
 
 ---
 
-## 🎬 Live Preview (GIF)
+## 🎬 Live Preview  
 
 <p align="center">
-  <img src="Portfolio%20-%20Take%20A%20Look/preview.gif" width="90%" alt="Portfolio Demo"/>
+  <img src="Portfolio-Take%20a%20Look/preview.gif" width="95%" />
 </p>
-
-> 💡 *Tip: Convert your screen recording into a GIF and name it `preview.gif` inside your folder.*
 
 ---
 
-## 📸 Portfolio – Take A Look  
+## 🚀 Hero Section  
 
-### 🧩 Hero Section  
-![Hero Section](Portfolio%20-%20Take%20A%20Look/hero.png)
+<p align="center">
+  <img src="Portfolio-Take%20a%20Look/Hero-Sectionpng.png" width="95%" />
+</p>
 
-### 🚀 Projects Section  
-![Projects Section](Portfolio%20-%20Take%20A%20Look/project.png)
+---
 
-### 📱 Responsive Design  
-![Responsive](Portfolio%20-%20Take%20A%20Look/responsive.png)
+## 🌓 Light Theme  
+
+<p align="center">
+  <img src="Portfolio-Take%20a%20Look/whiteThemeHero.png" width="95%" />
+</p>
+
+---
+
+## 📖 About / Education Section  
+
+<p align="center">
+  <img src="Portfolio-Take%20a%20Look/education.png" width="95%" />
+</p>
+
+---
+
+## 🧠 Engineering Philosophy  
+
+<p align="center">
+  <img src="Portfolio-Take%20a%20Look/EngineeringSection.png" width="95%" />
+</p>
+
+---
+
+## 🛠️ Skills & Tech Stack  
+
+<p align="center">
+  <img src="Portfolio-Take%20a%20Look/skills.png" width="95%" />
+</p>
+
+---
+
+## 🚀 Projects Showcase  
+
+<p align="center">
+  <img src="Portfolio-Take%20a%20Look/Project.png" width="95%" />
+</p>
+
+---
+
+## 📬 Contact Section  
+
+<p align="center">
+  <img src="Portfolio-Take%20a%20Look/connect.png" width="95%" />
+</p>
+
+---
+
+## 📱 Responsive Design  
+
+<p align="center">
+  <img src="Portfolio-Take%20a%20Look/IpadViewHero.png" width="45%" />
+  <img src="Portfolio-Take%20a%20Look/mobileViewHeropng.png" width="45%" />
+</p>
 
 ---
 
 ## 🌟 Core Features  
 
-✨ Minimal & modern UI  
-📱 Fully responsive across all devices  
-⚡ Fast, lightweight, and optimized  
-🧩 Clean and well-structured sections  
-🎯 Smooth navigation and user experience  
-📈 Represents real growth and learning journey  
+✨ Modern & minimal UI  
+📱 Fully responsive across devices  
+⚡ Fast and optimized performance  
+🧩 Clean structure and navigation  
+🎯 Smooth user experience  
+📈 Shows real growth and consistency  
 
 ---
 
@@ -47,22 +97,20 @@
 | Technology | Purpose |
 |------------|--------|
 | HTML5 | Structure |
-| CSS3 | Styling, layout, animations |
-| JavaScript | Interactivity & responsiveness |
+| CSS3 | Styling & animations |
+| JavaScript | Interactivity |
 
 ---
 
 ## 🎯 Purpose  
 
-This portfolio is not just a project — it is my **digital identity**.  
+This portfolio is my **digital identity** — a reflection of:  
 
-It reflects:  
-- My **learning journey**  
-- My **practical skills**  
-- My **commitment to improvement**  
+- My learning journey  
+- My problem-solving mindset  
+- My ability to build real-world projects  
 
-I strongly believe in:  
-> 🚀 *Learning by building real-world projects*  
+> 🚀 *I believe in learning by building.*
 
 ---
 
@@ -92,13 +140,13 @@ I strongly believe in:
 
 > “All respect to someone who takes the time to know me through my work.”  
 
-This project may not be perfect, but it is:  
-✔ Real  
-✔ Built with effort  
-✔ Continuously improving  
+This project represents:  
+✔ Consistency  
+✔ Real effort  
+✔ Continuous improvement  
 
 ---
 
 ## ⭐ Support  
 
-If you like this project, consider giving it a ⭐ — it motivates me to build more!
+If you like this project, consider giving it a ⭐
