@@ -8,7 +8,9 @@
 
 ---
 
-## 🎬 Live Preview  : <a href="aikavya.github.io/PortfolioMade/">PortfolioMade</a>
+## 🎬 Live Preview  :
+
+👉 **[Visit Portfolio](https://aikavya.github.io/PortfolioMade/)**  
 
 <p align="center">
   <img src="Portfolio-Take%20a%20Look/preview.gif" width="95%" />
@@ -114,9 +116,7 @@ This portfolio is my **digital identity** — a reflection of:
 
 ---
 
-## 🌐 Live Website  
 
-👉 **[Visit Portfolio](https://aikavya.github.io/PortfolioMade/)**  
 
 ---
 
