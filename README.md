@@ -8,7 +8,7 @@
 
 ---
 
-## 🎬 Live Preview  : <a href="aikavya.github.io/PortfolioMade">PortfolioMade</a>
+## 🎬 Live Preview  : <a href="aikavya.github.io/PortfolioMade/">PortfolioMade</a>
 
 <p align="center">
   <img src="Portfolio-Take%20a%20Look/preview.gif" width="95%" />
