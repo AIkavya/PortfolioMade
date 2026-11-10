@@ -1802,6 +1802,246 @@ body {
   }
 }
 
+
+
+
+/* ==========================================================================
+   Resume Preview Modal (Responsive & Theme-Compatible)
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 10, 16, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+  padding: 16px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 960px;
+  height: 90vh;
+  max-height: 920px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 30px var(--glow-brand-20);
+  transform: translateY(20px) scale(0.97);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.active .modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-dark);
+  background: rgba(255, 255, 255, 0.02);
+  gap: 12px;
+}
+
+.modal-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.modal-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.modal-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  color: var(--grey-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.modal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-dark);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.05);
+  user-select: none;
+}
+
+.modal-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--brand-primary);
+  transform: translateY(-1px);
+}
+
+.modal-download-btn {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: #ffffff !important;
+}
+
+.modal-download-btn:hover {
+  background: var(--brand-accent);
+  box-shadow: 0 4px 14px var(--glow-brand-35);
+}
+
+.modal-close-btn {
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--grey-medium);
+}
+
+.modal-close-btn:hover {
+  color: var(--white);
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.modal-body {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  background: #2b2b2b;
+  position: relative;
+  display: flex;
+}
+
+.modal-pdf-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.pdf-fallback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px;
+  gap: 18px;
+  background: var(--bg-surface);
+}
+
+.pdf-fallback-text {
+  font-family: "Poppins", sans-serif;
+  color: var(--grey-medium);
+  font-size: 0.95rem;
+  max-width: 360px;
+}
+
+.pdf-fallback-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Light theme overrides */
+html.light-theme .modal-card {
+  background: var(--bg-surface);
+  border-color: var(--border-dark);
+}
+
+html.light-theme .modal-title {
+  color: var(--text-black);
+}
+
+html.light-theme .modal-subtitle {
+  color: var(--grey-dark);
+}
+
+html.light-theme .modal-btn {
+  color: var(--text-black);
+  border-color: var(--border-dark);
+}
+
+html.light-theme .modal-download-btn {
+  color: #ffffff !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .modal-card {
+    height: 94vh;
+    border-radius: 12px;
+  }
+
+  .modal-header {
+    padding: 10px 14px;
+  }
+
+  .modal-title {
+    font-size: 1rem;
+  }
+
+  .modal-subtitle {
+    display: none;
+  }
+
+  .modal-btn span {
+    display: none; /* Icon-only on mobile buttons to save space */
+  }
+
+  .modal-btn {
+    padding: 8px 10px;
+  }
+}
+
+
 /* --- Large Phone / Small Tablet --- */
 @media (min-width: 768px) and (max-width: 910px) {
   /* 1. Layout Adjustments */
@@ -2042,6 +2282,246 @@ body {
     transform: rotate(-45deg) translate(5px, -8px);
   }
 }
+
+
+
+
+/* ==========================================================================
+   Resume Preview Modal (Responsive & Theme-Compatible)
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 10, 16, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+  padding: 16px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 960px;
+  height: 90vh;
+  max-height: 920px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 30px var(--glow-brand-20);
+  transform: translateY(20px) scale(0.97);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.active .modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-dark);
+  background: rgba(255, 255, 255, 0.02);
+  gap: 12px;
+}
+
+.modal-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.modal-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.modal-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  color: var(--grey-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.modal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-dark);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.05);
+  user-select: none;
+}
+
+.modal-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--brand-primary);
+  transform: translateY(-1px);
+}
+
+.modal-download-btn {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: #ffffff !important;
+}
+
+.modal-download-btn:hover {
+  background: var(--brand-accent);
+  box-shadow: 0 4px 14px var(--glow-brand-35);
+}
+
+.modal-close-btn {
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--grey-medium);
+}
+
+.modal-close-btn:hover {
+  color: var(--white);
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.modal-body {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  background: #2b2b2b;
+  position: relative;
+  display: flex;
+}
+
+.modal-pdf-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.pdf-fallback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px;
+  gap: 18px;
+  background: var(--bg-surface);
+}
+
+.pdf-fallback-text {
+  font-family: "Poppins", sans-serif;
+  color: var(--grey-medium);
+  font-size: 0.95rem;
+  max-width: 360px;
+}
+
+.pdf-fallback-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Light theme overrides */
+html.light-theme .modal-card {
+  background: var(--bg-surface);
+  border-color: var(--border-dark);
+}
+
+html.light-theme .modal-title {
+  color: var(--text-black);
+}
+
+html.light-theme .modal-subtitle {
+  color: var(--grey-dark);
+}
+
+html.light-theme .modal-btn {
+  color: var(--text-black);
+  border-color: var(--border-dark);
+}
+
+html.light-theme .modal-download-btn {
+  color: #ffffff !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .modal-card {
+    height: 94vh;
+    border-radius: 12px;
+  }
+
+  .modal-header {
+    padding: 10px 14px;
+  }
+
+  .modal-title {
+    font-size: 1rem;
+  }
+
+  .modal-subtitle {
+    display: none;
+  }
+
+  .modal-btn span {
+    display: none; /* Icon-only on mobile buttons to save space */
+  }
+
+  .modal-btn {
+    padding: 8px 10px;
+  }
+}
+
 
 /* --- Mobile / Small Phone --- */
 @media (min-width: 576px) and (max-width: 768px) {
@@ -2298,6 +2778,246 @@ body {
     transform: rotate(-45deg) translate(5px, -8px);
   }
 }
+
+
+
+
+/* ==========================================================================
+   Resume Preview Modal (Responsive & Theme-Compatible)
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 10, 16, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+  padding: 16px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 960px;
+  height: 90vh;
+  max-height: 920px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 30px var(--glow-brand-20);
+  transform: translateY(20px) scale(0.97);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.active .modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-dark);
+  background: rgba(255, 255, 255, 0.02);
+  gap: 12px;
+}
+
+.modal-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.modal-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.modal-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  color: var(--grey-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.modal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-dark);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.05);
+  user-select: none;
+}
+
+.modal-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--brand-primary);
+  transform: translateY(-1px);
+}
+
+.modal-download-btn {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: #ffffff !important;
+}
+
+.modal-download-btn:hover {
+  background: var(--brand-accent);
+  box-shadow: 0 4px 14px var(--glow-brand-35);
+}
+
+.modal-close-btn {
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--grey-medium);
+}
+
+.modal-close-btn:hover {
+  color: var(--white);
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.modal-body {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  background: #2b2b2b;
+  position: relative;
+  display: flex;
+}
+
+.modal-pdf-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.pdf-fallback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px;
+  gap: 18px;
+  background: var(--bg-surface);
+}
+
+.pdf-fallback-text {
+  font-family: "Poppins", sans-serif;
+  color: var(--grey-medium);
+  font-size: 0.95rem;
+  max-width: 360px;
+}
+
+.pdf-fallback-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Light theme overrides */
+html.light-theme .modal-card {
+  background: var(--bg-surface);
+  border-color: var(--border-dark);
+}
+
+html.light-theme .modal-title {
+  color: var(--text-black);
+}
+
+html.light-theme .modal-subtitle {
+  color: var(--grey-dark);
+}
+
+html.light-theme .modal-btn {
+  color: var(--text-black);
+  border-color: var(--border-dark);
+}
+
+html.light-theme .modal-download-btn {
+  color: #ffffff !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .modal-card {
+    height: 94vh;
+    border-radius: 12px;
+  }
+
+  .modal-header {
+    padding: 10px 14px;
+  }
+
+  .modal-title {
+    font-size: 1rem;
+  }
+
+  .modal-subtitle {
+    display: none;
+  }
+
+  .modal-btn span {
+    display: none; /* Icon-only on mobile buttons to save space */
+  }
+
+  .modal-btn {
+    padding: 8px 10px;
+  }
+}
+
 
 @media (min-width: 0px) and (max-width: 576px) {
   .body {
@@ -2594,3 +3314,476 @@ body {
     transform: rotate(-45deg) translate(5px, -8px);
   }
 }
+
+/* ==========================================================================
+   Resume Preview Modal (Responsive & Theme-Compatible)
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 10, 16, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+  padding: 16px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 960px;
+  height: 90vh;
+  max-height: 920px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 30px var(--glow-brand-20);
+  transform: translateY(20px) scale(0.97);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.active .modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-dark);
+  background: rgba(255, 255, 255, 0.02);
+  gap: 12px;
+}
+
+.modal-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.modal-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.modal-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  color: var(--grey-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.modal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-dark);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.05);
+  user-select: none;
+}
+
+.modal-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--brand-primary);
+  transform: translateY(-1px);
+}
+
+.modal-download-btn {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: #ffffff !important;
+}
+
+.modal-download-btn:hover {
+  background: var(--brand-accent);
+  box-shadow: 0 4px 14px var(--glow-brand-35);
+}
+
+.modal-close-btn {
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--grey-medium);
+}
+
+.modal-close-btn:hover {
+  color: var(--white);
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.modal-body {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  background: #2b2b2b;
+  position: relative;
+  display: flex;
+}
+
+.modal-pdf-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.pdf-fallback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px;
+  gap: 18px;
+  background: var(--bg-surface);
+}
+
+.pdf-fallback-text {
+  font-family: "Poppins", sans-serif;
+  color: var(--grey-medium);
+  font-size: 0.95rem;
+  max-width: 360px;
+}
+
+.pdf-fallback-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Light theme overrides */
+html.light-theme .modal-card {
+  background: var(--bg-surface);
+  border-color: var(--border-dark);
+}
+
+html.light-theme .modal-title {
+  color: var(--text-black);
+}
+
+html.light-theme .modal-subtitle {
+  color: var(--grey-dark);
+}
+
+html.light-theme .modal-btn {
+  color: var(--text-black);
+  border-color: var(--border-dark);
+}
+
+html.light-theme .modal-download-btn {
+  color: #ffffff !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .modal-card {
+    height: 94vh;
+    border-radius: 12px;
+  }
+
+  .modal-header {
+    padding: 10px 14px;
+  }
+
+  .modal-title {
+    font-size: 1rem;
+  }
+
+  .modal-subtitle {
+    display: none;
+  }
+
+  .modal-btn span {
+    display: none; /* Icon-only on mobile buttons to save space */
+  }
+
+  .modal-btn {
+    padding: 8px 10px;
+  }
+}
+
+/* ==========================================================================
+   Resume Preview Modal (Responsive & Theme-Compatible)
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 10, 16, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+  padding: 16px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 960px;
+  height: 90vh;
+  max-height: 920px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 30px var(--glow-brand-20);
+  transform: translateY(20px) scale(0.97);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.active .modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-dark);
+  background: rgba(255, 255, 255, 0.02);
+  gap: 12px;
+}
+
+.modal-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.modal-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.modal-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  color: var(--grey-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.modal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-dark);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.05);
+  user-select: none;
+}
+
+.modal-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--brand-primary);
+  transform: translateY(-1px);
+}
+
+.modal-download-btn {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: #ffffff !important;
+}
+
+.modal-download-btn:hover {
+  background: var(--brand-accent);
+  box-shadow: 0 4px 14px var(--glow-brand-35);
+}
+
+.modal-close-btn {
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--grey-medium);
+}
+
+.modal-close-btn:hover {
+  color: var(--white);
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.modal-body {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  background: #2b2b2b;
+  position: relative;
+  display: flex;
+}
+
+.modal-pdf-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.pdf-fallback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px;
+  gap: 18px;
+  background: var(--bg-surface);
+}
+
+.pdf-fallback-text {
+  font-family: "Poppins", sans-serif;
+  color: var(--grey-medium);
+  font-size: 0.95rem;
+  max-width: 360px;
+}
+
+.pdf-fallback-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Light theme overrides */
+html.light-theme .modal-card {
+  background: var(--bg-surface);
+  border-color: var(--border-dark);
+}
+
+html.light-theme .modal-title {
+  color: var(--text-black);
+}
+
+html.light-theme .modal-subtitle {
+  color: var(--grey-dark);
+}
+
+html.light-theme .modal-btn {
+  color: var(--text-black);
+  border-color: var(--border-dark);
+}
+
+html.light-theme .modal-download-btn {
+  color: #ffffff !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .modal-card {
+    height: 94vh;
+    border-radius: 12px;
+  }
+
+  .modal-header {
+    padding: 10px 14px;
+  }
+
+  .modal-title {
+    font-size: 1rem;
+  }
+
+  .modal-subtitle {
+    display: none;
+  }
+
+  .modal-btn span {
+    display: none; /* Icon-only on mobile buttons to save space */
+  }
+
+  .modal-btn {
+    padding: 8px 10px;
+  }
+}
+
