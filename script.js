@@ -21,6 +21,19 @@ if (themeBtn) {
 }
 
 // --------------------------------------------------------------------------
+// Mobile Hamburger Navigation: Auto-close on link click
+// --------------------------------------------------------------------------
+const mobileNavLinks = document.querySelectorAll(".kp2 a");
+mobileNavLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const navCheck = document.getElementById("nav-check");
+    if (navCheck && navCheck.checked) {
+      navCheck.checked = false;
+    }
+  });
+});
+
+// --------------------------------------------------------------------------
 // Contact Form: Frontend Validation & Direct Email Dispatch Backend Service
 // --------------------------------------------------------------------------
 const contactForm = document.getElementById("contact-form");
@@ -159,6 +172,61 @@ if (contactForm) {
     } finally {
       submitBtn.disabled = false;
       if (btnText) btnText.textContent = originalText;
+    }
+  });
+}
+
+// --------------------------------------------------------------------------
+// Resume Preview Modal (Responsive & Interactive with Keyboard / Backdrop Support)
+// --------------------------------------------------------------------------
+const resumeModal = document.getElementById("resume-modal");
+const resumeTriggers = document.querySelectorAll(".resume-trigger");
+const resumeCloseBtn = document.getElementById("resume-modal-close");
+const navCheck = document.getElementById("nav-check");
+
+function openResumeModal(e) {
+  if (e) e.preventDefault();
+  if (!resumeModal) return;
+
+  // If mobile hamburger menu is open, collapse it
+  if (navCheck && navCheck.checked) {
+    navCheck.checked = false;
+  }
+
+  resumeModal.classList.add("active");
+  resumeModal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden"; // Prevent background body scroll
+}
+
+function closeResumeModal() {
+  if (!resumeModal) return;
+  resumeModal.classList.remove("active");
+  resumeModal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+if (resumeTriggers && resumeTriggers.length > 0) {
+  resumeTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", openResumeModal);
+  });
+}
+
+if (resumeCloseBtn) {
+  resumeCloseBtn.addEventListener("click", closeResumeModal);
+}
+
+if (resumeModal) {
+  // Close when clicking outside the modal dialog card
+  resumeModal.addEventListener("click", (e) => {
+    if (e.target === resumeModal) {
+      closeResumeModal();
+    }
+  });
+
+  // Close when pressing the Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && resumeModal.classList.contains("active")) {
+      closeResumeModal();
     }
   });
 }
