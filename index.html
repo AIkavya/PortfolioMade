@@ -50,7 +50,7 @@
       <!-- 3. Navigation Links -->
       <div class="kp2">
         <a href="#home" class="bt" id="HOME">HOME</a>
-        <a href="#" class="bt" id="">Resume</a>
+        <a href="kavya_Panchal_CV.pdf" class="bt resume-trigger" id="nav-resume-btn">Resume</a>
         <a href="#projects" class="bt" id="Projects">Projects</a>
         <a href="#skills" class="bt" id="Skills">Skills</a>
         <a href="#story" class="bt" id="About">About Me</a>
@@ -350,8 +350,8 @@
           <h1 class="pr2">"Every step builds upon the previous one."</h1>
 
           <div class="resume">
-            <a href="" class="bt">LeetCode</a>
-            <a href=" " class="Build">Resume</a>
+            <a href="https://leetcode.com/u/KavyaPanchal/" class="bt">LeetCode</a>
+            <a href="kavya_Panchal_CV.pdf" class="Build resume-trigger" id="body-resume-btn">Resume</a>
           </div>
 
           <h1 class="pr2" id="story">"Stories That Shaped Me"</h1>
@@ -424,6 +424,72 @@
           <p class="footer-copy">© 2025 Kavya. All Rights Reserved.</p>
         </div>
       </footer>
+    </div>
+
+    <!-- Resume Preview Modal -->
+    <div id="resume-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <h2 id="resume-modal-title" class="modal-title">Resume Preview</h2>
+            <span class="modal-subtitle">Kavya Panchal </span>
+          </div>
+          <div class="modal-actions">
+            <a
+              href="kavya_Panchal_CV.pdf"
+              download="Kavya_Panchal_CV.pdf"
+              class="modal-btn modal-download-btn"
+              id="resume-download-btn"
+              title="Download Resume"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download</span>
+            </a>
+            <a
+              href="kavya_Panchal_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="modal-btn modal-external-btn"
+              title="Open PDF in new tab"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+            <button
+              type="button"
+              class="modal-btn modal-close-btn"
+              id="resume-modal-close"
+              aria-label="Close Preview"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <object
+            id="resume-pdf-object"
+            data="kavya_Panchal_CV.pdf#toolbar=1&navpanes=0"
+            type="application/pdf"
+            class="modal-pdf-viewer"
+          >
+            <div class="pdf-fallback-container">
+              <p class="pdf-fallback-text">Your browser cannot inline PDF preview on this screen size.</p>
+              <div class="pdf-fallback-links">
+                <a href="kavya_Panchal_CV.pdf" target="_blank" rel="noopener noreferrer" class="Build">View Fullscreen</a>
+                <a href="kavya_Panchal_CV.pdf" download="Kavya_Panchal_CV.pdf" class="bt">Download CV</a>
+              </div>
+            </div>
+          </object>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
